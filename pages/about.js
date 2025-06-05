@@ -2,7 +2,7 @@ import Head from "next/head";
 import { CartContext } from '../components/CartContext';
 import Navbar from "@/components/Navbar";
 import styles from '../styles/about.module.css';
-
+import Link from 'next/link';
 
 
 export default function about(){
@@ -17,12 +17,12 @@ export default function about(){
             <div className={styles.container}>            
 
                     <h1 className={styles.head}>Nature Candle</h1>
-                    <h3 className={styles.sub}>"Discover the magic of soy wax, known for its clean burn and long-lasting fragrance, ensuring<br></br>  
-                                                that every candle from our collection is a delightful experience from start to finish."</h3>
+                    <h3 className={styles.sub}>&quot;Discover the magic of soy wax, known for its clean burn and long-lasting fragrance, ensuring<br></br>  
+                                                that every candle from our collection is a delightful experience from start to finish.&quot;</h3>
 
-                    <a href="/products">
+                    <Link href="/products">
                         <button className={styles.button}>Shop Now</button>
-                    </a>
+                    </Link>
             </div>
                 
            

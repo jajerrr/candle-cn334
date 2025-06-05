@@ -4,21 +4,22 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar'; 
 import Footer from '@/components/Footer';
 import styles from '../styles/shipping.module.css';
+import Link from 'next/link';
 
 
 // ฟังก์ชันการนำทางในหน้าจัดส่ง
 const PageNav = () => (
     <div className={styles.navBar}>
         <div className={styles.bar}>
-            <a href="/cart" className={styles.linkCart}>Cart</a>
+            <Link href="/cart" className={styles.linkCart}>Cart</Link>
             <svg className={styles.svgIcon} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
             </svg>
-            <a href="/shipping" className={styles.linkShipping}>Shipping</a>
+            <Link href="/shipping" className={styles.linkShipping}>Shipping</Link>
             <svg className={styles.svgIcon} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />
             </svg>
-            <a href="/payment" className={styles.linkPayment}>Payment</a>
+            <Link href="/payment" className={styles.linkPayment}>Payment</Link>
         </div>
     </div>
 );

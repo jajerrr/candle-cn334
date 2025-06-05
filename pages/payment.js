@@ -4,28 +4,29 @@ import Head from 'next/head';
 import Navbar from '@/components/Navbar'; 
 import Footer from '@/components/Footer'; 
 import styles from '../styles/payment.module.css'; 
+import Link from 'next/link';
 
 
 const PageNav = () => (  
     <div className={styles.navBar}>  
         <div className={styles.bar}>  
-            <a href="/cart" className={styles.linkCart}>  
+            <Link href="/cart" className={styles.linkCart}>  
                 <p>Cart</p>  
-            </a>  
+            </Link>  
             <svg className={styles.svgIcon} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">  
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />  
             </svg>  
                 
-            <a href="/shipping" className={styles.linkShipping}>
+            <Link href="/shipping" className={styles.linkShipping}>
                 <p>Shipping</p>  
-            </a>  
+            </Link>  
             <svg className={styles.svgIcon} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">  
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1" />  
             </svg>  
 
-            <a href="/payment" className={styles.linkPayment}>  
+            <Link href="/payment" className={styles.linkPayment}>  
                 <p>Payment</p>  
-            </a>  
+            </Link>  
         </div>  
     </div>  
 
@@ -200,9 +201,9 @@ const PaymentPage = () => {
                             
                             <span className={styles.infoLabel}>Contact: <span className={styles.email}>{sender.contact}</span></span>
 
-                            <a href={`/shipping?name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}&method=${sender.selectedMethod}`}>
+                            <Link href={`/shipping?name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}&method=${sender.selectedMethod}`}>
                                 <p className={styles.edit}>Edit</p>
-                            </a>
+                            </Link>
 
                         </div>
 
@@ -223,9 +224,9 @@ const PaymentPage = () => {
                                         
                                     </div>
                                 </div>
-                                <a href={`/shipping?contact=${sender.contact}&products=${encodeURIComponent(JSON.stringify(cartItems))}&method=${sender.selectedMethod}`}>
+                                <Link href={`/shipping?contact=${sender.contact}&products=${encodeURIComponent(JSON.stringify(cartItems))}&method=${sender.selectedMethod}`}>
                                     <p className={styles.edit}>Edit</p>
-                                </a>
+                                </Link>
                             
                         </div>
 
@@ -236,9 +237,9 @@ const PaymentPage = () => {
                             <span className={styles.infoLabel}>
                                 Method: <span className={styles.inputShipping}>{sender.selectedMethod}</span>
                             </span>
-                            <a href={`/shipping?method=${sender.selectedMethod}&contact=${sender.contact}&name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}`}>
+                            <Link href={`/shipping?method=${sender.selectedMethod}&contact=${sender.contact}&name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}`}>
                                 <p className={styles.edit}>Edit</p>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -300,12 +301,12 @@ const PaymentPage = () => {
 
                     <div className={styles.backAndPayButtons}>
 
-                        <a href={`/shipping?method=${sender.selectedMethod}&contact=${sender.contact}&name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}`} className="{styles.backButton}">
+                        <Link href={`/shipping?method=${sender.selectedMethod}&contact=${sender.contact}&name=${sender.name}&surname=${sender.surname}&address=${sender.address}&city=${sender.city}&province=${sender.province}&country=${sender.country}&postcode=${sender.postcode}&products=${encodeURIComponent(JSON.stringify(cartItems))}`} className="{styles.backButton}">
                             <h3 className={styles.back}>Back to detail</h3>
-                        </a>
-                        <a href="/confirm">
-                        < button className={styles.payButton}onClick={() => {handlePayNowClick(cartItems, sender, total, shippingCost);}}>Pay Now</button>                        
-                        </a>
+                        </Link>
+                        <Link href="/confirm">
+                            <button className={styles.payButton}onClick={() => {handlePayNowClick(cartItems, sender, total, shippingCost);}}>Pay Now</button>                        
+                        </Link>
                     </div>
                 </div>
             </div>
