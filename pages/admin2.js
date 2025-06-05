@@ -3,8 +3,9 @@ import NavbarAdmin from "@/components/NavbarAdmin";
 import styles from '../styles/admin2.module.css';
 import { useState } from 'react';
 import React from "react";
+import Link from 'next/link';
 
-export default function admin2() {
+export default function Admin2() {
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -173,11 +174,11 @@ export default function admin2() {
             <div className={styles.modalContent}>
               <div className={styles.headaddproduct}>
                 <h2>Add Product</h2>
-                <a href="#" className={styles.closeButton} onClick={() => setShowAddProductModal(false)}>
+                <Link href="#" className={styles.closeButton} onClick={() => setShowAddProductModal(false)}>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                   </svg>
-                </a>
+                </Link>
               </div>
               <form onSubmit={handleAddProductSubmit}>
                 <div className={styles.formGroup}>
@@ -261,11 +262,11 @@ export default function admin2() {
     <div className={styles.modalContent}>
       <div className={styles.headaddproduct}>
         <h2>Edit Product</h2>
-        <a href="#" className={styles.closeEdit} onClick={() => setShowEditProductModal(false)}>
+        <Link href="#" className={styles.closeEdit} onClick={() => setShowEditProductModal(false)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
-        </a>
+        </Link>
       </div>
       <form onSubmit={handleEditProductSubmit}>
         <div className={styles.formGroup}>

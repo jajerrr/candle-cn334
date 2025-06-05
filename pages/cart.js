@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"; 
 import Head from "next/head"; 
 import styles from '../styles/cart.module.css';
+import Link from 'next/link';
 
 
 const CartPage = () => {
@@ -118,9 +119,9 @@ return (
         <div className={styles.productListContainer}> 
             <div className={styles.header}> 
                 <h1 className={styles.title}>Your cart items</h1> 
-                    <a href="/products"> 
+                    <Link href="/products"> 
                     <h3 className={styles.back}>Back to shopping</h3> 
-                    </a> 
+                    </Link> 
     </div> 
 
  
@@ -147,7 +148,7 @@ return (
 
                         <h2 className={styles.productName}>{item.candle_name}</h2> 
                 
-                        <a> <h3 className={styles.removeProduct} onClick={() => removeItem(index)}>Remove</h3>  </a> 
+                        <Link> <h3 className={styles.removeProduct} onClick={() => removeItem(index)}>Remove</h3>  </Link> 
                         </div> 
                 </div> 
             </td> 

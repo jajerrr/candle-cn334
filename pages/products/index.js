@@ -58,8 +58,8 @@ const ProductList = () => {
                 <div className={styles.containertext}>
                     <h1 className={styles.title}>Products</h1>
                     <p className={styles.subtitle}>Order it for you or for your beloved ones</p>
-                    <p className={styles.subhead}>"Unveil the Enchantment of Soy Wax: With its Clean Burn and Enduring Aroma, Our Collection Promises<br></br> 
-                        Every Candle to be an Exquisite Journey of Scent, Lasting from the First Light to the Last Glimmer."</p>
+                    <p className={styles.subhead}>&quot;Unveil the Enchantment of Soy Wax: With its Clean Burn and Enduring Aroma, Our Collection Promises<br></br> 
+                        Every Candle to be an Exquisite Journey of Scent, Lasting from the First Light to the Last Glimmer.&quot;</p>
                 </div>
             </div>
 

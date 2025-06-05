@@ -12,7 +12,7 @@ export default function Contact() {
 
             <div className={styles.flexcontainer}>
                 <h1 className={styles.Contact}>Contact us</h1>
-                <p className={styles.sub}>We're here to help with any questions or inquiries you may have.<br></br> 
+                <p className={styles.sub}>We are here to help with any questions or inquiries you may have.<br></br> 
                                             Feel free to reach out to us using any of the methods below</p>
                 <div className={styles.containerBox}>
                     <div className={styles.box}>

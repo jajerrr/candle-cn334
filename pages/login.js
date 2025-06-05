@@ -1,4 +1,5 @@
 import styles from '../styles/login.module.css'; 
+import Link from 'next/link';
 
 export default function Login() {
     return (
@@ -25,9 +26,9 @@ export default function Login() {
                         />
                     </form>
 
-                    <a href="/">
+                    <Link href="/">
                         <button className={styles.payButton}>Login</button>
-                    </a>
+                    </Link>
 
                 </div>
             </div>
